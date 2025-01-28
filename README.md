@@ -6,7 +6,7 @@ It is helpful to review the prerequisites [here](https://dev.to/nodeshiftcloud/a
 ```
 module purge
 module load rhel8/default-amp
-python/3.11.0-icl
+module load python/3.11.0-icl
 ```
 
 ## Installing Ollama

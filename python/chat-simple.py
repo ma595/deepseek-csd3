@@ -10,10 +10,9 @@ print(f"Using device: {device}")
 model_name_or_path = "deepseek-ai/DeepSeek-R1-Distill-Llama-8B"
 tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
 model = AutoModelForCausalLM.from_pretrained(
-    model_name_or_path,
-    device_map="auto",
-    torch_dtype=torch.float16
+    model_name_or_path, device_map="auto", torch_dtype=torch.float16
 ).to(device)
+
 
 # Function to generate a response
 def generate_response(prompt):
@@ -24,7 +23,7 @@ def generate_response(prompt):
         do_sample=True,
         temperature=0.7,
         top_p=0.9,
-        pad_token_id=tokenizer.eos_token_id
+        pad_token_id=tokenizer.eos_token_id,
     )
     response = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
@@ -32,6 +31,7 @@ def generate_response(prompt):
     if "Bot:" in response:
         response = response.split("Bot:")[1].strip()
     return response
+
 
 # Chat loop
 print("Hello! I'm DeepSeek-R1. Type 'exit' or press Ctrl+C to quit.")
@@ -50,4 +50,3 @@ while True:
     except KeyboardInterrupt:
         print("\nGoodbye!")
         break
-
