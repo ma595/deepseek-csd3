@@ -57,6 +57,8 @@ ln -s /new/path/to/rds/.cache ~/.cache/
 Download the DeepSeek-V3 repository. 
 ```
 git clone https://github.com/deepseek-ai/DeepSeek-V3
+python3 -m venv ./venv3
+source venv3/bin/activate
 cd DeepSeek-V3/inference; pip install -r "requirements.txt"
 pip install huggingface
 ```
