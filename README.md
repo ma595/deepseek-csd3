@@ -1,6 +1,11 @@
-# Running DeepSeek on Cambridge CSD3
+# Running DeepSeek-R1 on Cambridge CSD3
 
-It is helpful to review the prerequisites [here](https://dev.to/nodeshiftcloud/a-step-by-step-guide-to-install-deepseek-r1-locally-with-ollama-vllm-or-transformers-44a1). 
+This provides some simple instructions on how to run DeepSeek-R1 on the nvidia A100 GPU nodes. 
+
+TODO:
+- [ ] Examine how to run mult-gpu and multi-node inference of [DeepSeek-R1-Distill-Qwen-14B](/https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B).
+
+It is helpful to review the model's hardware requirements [here](https://dev.to/nodeshiftcloud/a-step-by-step-guide-to-install-deepseek-r1-locally-with-ollama-vllm-or-transformers-44a1). 
 
 ## Setting up environment
 ```
