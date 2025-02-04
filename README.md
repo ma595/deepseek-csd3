@@ -39,7 +39,7 @@ You need to pass ollama the environment variable `OLLAMA_MODELS`, otherwise it w
 ```
 OLLAMA_MODELS=/path/to/rds/where/you/have/space ollama serve
 # then open a new terminal and do:
-ollama run deepseek-r1:14b`
+ollama run deepseek-r1:14b
 ```
 This then enters a chat prompt - more complex models provide CoT. Obviously this can all be executed on a GPU if desired. 
 
